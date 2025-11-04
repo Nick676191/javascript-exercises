@@ -1,12 +1,11 @@
 // the rest parameter `...` in the function call allows us to accept any number of additional arguments to the function
 const removeFromArray = function(arr, ...elements) {
     for (let element of elements) {
-        elementIndex = arr.indexOf(element);
-        // go through the loop if the element is not in the array
-        if (elementIndex === -1) {
-            continue;
-        } else {
-            arr.splice(elementIndex, 1);
+        // looping from the end of the array to not mess up indexing when elements get dropped from the array
+        for (let i = arr.length - 1; i >= 0; i--) {
+            if (element === arr[i]) {
+                arr.splice(i, 1)
+            };
         };
     };
     return arr
