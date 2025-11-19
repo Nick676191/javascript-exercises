@@ -9,12 +9,12 @@ const subtract = function(numOne, numTwo) {
 const sum = function(arr) {
 	return arr.reduce(
     (acc, val) => 
-      acc = acc + val, 0);
+      acc += val, 0);
 };
 
 const multiply = function(arr) {
   return arr.reduce((acc, val) =>
-    acc = acc * val);
+    acc *= val);
 };
 
 const power = function(base, exp) {
