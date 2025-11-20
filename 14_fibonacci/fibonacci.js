@@ -1,5 +1,6 @@
 // recursive example 
 const fibonacci = function(num) {
+    let num = Number(num);
     if (num < 0) {
         return "OOPS"
     } else if (num === 0) {
