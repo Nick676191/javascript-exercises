@@ -24,12 +24,14 @@ const fibonacci = function(num) {
     } else {
         let iterOne = 0;
         let iterTwo = 1;
-        for (let i = 2; i <= numb; i++) {
-            let finAns = iterOne + iterTwo;
+        let fibArr = [];
+        for (let i = 1; i < numb; i++) {
+            fibArr.push(iterOne + iterTwo)
             iterOne = iterTwo;
-            iterTwo = finAns;
+            // grab the last value rather than create an array with the last value
+            iterTwo = fibArr.slice(-1)[0];
         };
-        return finAns;
+        return fibArr.slice(-1)[0];
     };
 };
 
