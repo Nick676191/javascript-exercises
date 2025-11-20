@@ -14,7 +14,7 @@ const sum = function(arr) {
 
 const multiply = function(arr) {
   return arr.reduce((acc, val) =>
-    acc *= val);
+    acc *= val, 1);
 };
 
 const power = function(base, exp) {
