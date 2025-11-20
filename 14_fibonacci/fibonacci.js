@@ -1,14 +1,14 @@
 // recursive example 
 const fibonacci = function(num) {
-    let num = Number(num);
-    if (num < 0) {
+    let numb = Number(num);
+    if (numb < 0) {
         return "OOPS"
-    } else if (num === 0) {
+    } else if (numb === 0) {
         return 0
-    } else if (num === 1) {
+    } else if (numb === 1) {
         return 1
     } else {
-        return fibonacci(num - 1) + fibonacci(num - 2);
+        return fibonacci(numb - 1) + fibonacci(numb - 2);
     };
 };
 
