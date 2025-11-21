@@ -1,14 +1,10 @@
 const findTheOldest = function(objArr) {
-    objArr.map(person => {
-        if (person.yearOfDeath === undefined) {
-            person.yearOfDeath = new Date().getFullYear;
-        };
+    let sortArr = objArr.sort((a, b) => {
+        const aLife = a.yearOfDeath - a.yearOfBirth;
+        const bLife = b.yearOfDeath - b.yearOfBirth;
+        return bLife - aLife;
     });
-    objArr.sort((a, b) => {
-        a = a.yearOfDeath - a.yearOfBirth;
-        b = b.yearOfDeath - b.yearOfBirth;
-    });
-    return objArr[0].name;
+    return sortArr[0];
 };
 
 // Do not edit below this line
